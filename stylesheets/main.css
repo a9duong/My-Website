@@ -11,8 +11,10 @@
 }
 
 .jumbotron {
-  background-image:url("images/bannerpro.jpg");
-  height: 500px;
+  background-image: url("../images/bannerpro.jpg");
+  height: 200px;
+  width: 1400px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,6 +38,11 @@
 
 .learn-more {
   background-color: #f7f7f7;
+  position: relative;
+   left:0px;
+   bottom:0px;
+   height:100px;
+   width:100%;
 }
 
 .learn-more h3 {
@@ -56,6 +63,7 @@
 .neighbourhood-guides h2 {
     color: #393c3d;
     font-size: 24px;
+	text-align: center;
 }
 
 .neighbourhood-guides p {
