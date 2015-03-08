@@ -17,6 +17,15 @@
 		button.addEventListener("click", clickHandler, false);
 		button.style.cursor="pointer";
 		
+		//The arrow
+		var arrow = document.querySelector("#arrow");
+		
+		function render() {
+		//Position the arrow
+		//Multiply the players guess by 3 to get the correct pixel position on the scale
+		arrow.style.left = playersGuess * 3 - 7 + "px";
+		} 
+		
 		window.addEventListener("keydown", keydownHandler, false);
 		
 		function keydownHandler(event){
@@ -58,6 +67,9 @@
 				gameWon = true;
 				endGame();
 			}
+			
+			//Update the graphic display
+			render();
 		}
 		
 		function endGame(){
