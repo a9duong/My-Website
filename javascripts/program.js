@@ -82,7 +82,6 @@
 			} else {
 				output.innerHTML = "No more guesses left!" + "<br>" + "The number was: " + mysteryNumber + ".";
 			}
-			alert("G3t a Lyfe scrub and stop playing guessing g4mes lelelelelelel danny es numero uno brian sucks");
 			
 			//Disable the button
 			button.removeEventListener("click", clickHandler, false);
