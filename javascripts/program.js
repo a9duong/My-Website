@@ -16,6 +16,10 @@
 		var button = document.querySelector("button");
 		button.addEventListener("click", clickHandler, false);
 		button.style.cursor="pointer";
+		var button2 = document.querySelector("#button2");
+		button2.hidden = true;
+		button2.addEventListener("click", b2clickHandler, false);
+		button.style.cursor="pointer";
 		
 		//The arrow
 		var arrow = document.querySelector("#arrow");
@@ -38,11 +42,31 @@
 			validateInput();
 		}
 		
+		function b2clickHandler() {
+			input.value="";
+			mysteryNumber = Math.floor(Math.random() * 100);
+			console.log(mysteryNumber);
+			playersGuess = 0;
+			guessesRemaining = 10;
+			guessesMade = 0;
+			output.innerHTML = "I am thinking of a number between 0 and 99.";
+			gameWon = false;
+			button2.hidden = true;
+			button.hidden =false;
+			button.addEventListener("click", clickHandler, false);
+			button.disabled = false;
+			input.disabled = false;
+			window.addEventListener("keydown", keydownHandler, false);
+			arrow.style.left = -7 + "px";
+		}
+		
 		function validateInput(){
 			playersGuess = parseInt(input.value);
 			
 			if(isNaN(playersGuess)) {
 				output.innerHTML = "Please enter a number.";
+			} else if (playersGuess < 0 || playersGuess > 99) {
+				output.innerHTML = "Please enter a number between 0 and 99.";
 			} else {
 				playGame();
 			}
@@ -86,6 +110,8 @@
 			//Disable the button
 			button.removeEventListener("click", clickHandler, false);
 			button.disabled = true;
+			button.hidden = true;
+			button2.hidden = false;
 			
 			//Disable the enter keyCode
 			window.removeEventListener("keydown", keydownHandler, false);
