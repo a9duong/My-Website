@@ -66,7 +66,7 @@
 			if(isNaN(playersGuess)) {
 				output.innerHTML = "Please enter a number.";
 			} else if (playersGuess < 0 || playersGuess > 99) {
-				output.innerHTML = "Please enter a number between 0 and 99.";
+				output.innerHTML = "That's not a number between 0 and 99!" + "<br>" + "Please enter a number between 0 and 99.";
 			} else {
 				playGame();
 			}
