@@ -93,5 +93,14 @@
 		} else {
 			output.innerHTML = "You lost!" + "<br>" + "The earth has been invaded!";
 		}
+		
+		//Disable the button
+			button.removeEventListener("click", clickHandler, false);
+			button.disabled = true;
+			button.hidden = true;
+			button2.hidden = false;
+			
+			inputX.disabled = true;
+			inputY.disabled = true;
 	}
 } ());
