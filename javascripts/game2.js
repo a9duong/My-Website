@@ -89,7 +89,7 @@
 	
 	function endGame() {
 		if (gameWon){
-			output.HTML = "Hit! You saved the earth!" + "<br>" + "It only took you " + shotsMade + " shots.";
+			output.innerHTML = "Hit! You saved the earth!" + "<br>" + "It only took you " + shotsMade + " shots.";
 		} else {
 			output.innerHTML = "You lost!" + "<br>" + "The earth has been invaded!";
 		}
